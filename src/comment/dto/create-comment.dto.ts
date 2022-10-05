@@ -1,8 +1,6 @@
-import { IsNotEmpty, IsString } from 'class-validator';
+import { IsString } from 'class-validator';
 
-import { CommentEntity } from '../entities/comment.entity';
-
-export class CreateCommentDto extends CommentEntity {
+export class CreateCommentDto {
   @IsString()
   user_id: string;
 
