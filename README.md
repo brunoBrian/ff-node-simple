@@ -78,6 +78,26 @@ $ nest generate nomeRecurso
 
 4. Para persistir os dados no banco de dados MongoDB utilizando o Mongoose, salve suas alterações, suba para o seu repositório e altere para a branch `integracao-mongo`.
 
+## Publicando no Heroku
+
+1. Crie sua conta gratuita no Heroku em [https://www.heroku.com/](https://www.heroku.com/)
+
+2. Ao acessar seu Dashboard em https://dashboard.heroku.com/apps clique no botão New > Create new app
+
+3. Crie um nome único para seu app, escolha a região Estados Unidos e clique em Create App.
+
+4. Na seção Deployment method, conecte-se com a sua conta do GitHub, onde está hospedado o seu projeto Node.
+
+5. Após a conexão, busque pelo repositório do seu projeto, e ative o Deploy Automático com a branch Master.
+
+6. Faça o Deploy da branch master e pronto, seu projeto deverá estar no ar em um url semelhante a https://ff-node-simple.herokuapp.com.
+
+7. Faça um teste chamando o endpoint `comments` que criamos: https://ff-node-simple.herokuapp.com/comments. O retorno deverá ser:
+
+```
+[{"id":1,"comment":"Some comment","user_id":"1"}]
+```
+
 ## Test
 
 ```bash
